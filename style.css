@@ -1,0 +1,1434 @@
+
+/* =====================================
+   1. GLOBAL SETTINGS
+===================================== */
+
+:root {
+    --cream: #f7f4ed;
+    --white: #ffffff;
+    --green: #344b3a;
+    --green-light: #e5ebe1;
+    --gold: #c5a779;
+    --text: #454940;
+    --muted: #777b72;
+    --border: #e5e2d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--green);
+}
+
+h1 span,
+h2 span {
+    color: #829477;
+}
+
+.section-padding {
+    padding: 90px 8%;
+}
+
+.eyebrow {
+    color: #8b7958;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================
+   2. NAVIGATION
+===================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px 8%;
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.65rem;
+    line-height: 1.2;
+    color: var(--green);
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo small {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links > a {
+    font-size: 0.85rem;
+    transition: color 0.25s ease;
+}
+
+.nav-links > a:hover {
+    color: #8b7958;
+}
+
+.nav-links .nav-button {
+    background: var(--green);
+    color: var(--white);
+    padding: 12px 19px;
+    border-radius: 4px;
+}
+
+.nav-links .nav-button:hover {
+    background: #526b55;
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: var(--green);
+    border: 0;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+
+/* =====================================
+   3. HERO SECTION
+===================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding: 65px 8% 85px;
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 4.5vw, 4.5rem);
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+}
+
+.hero-description {
+    max-width: 460px;
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    transition: background 0.25s, color 0.25s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #526b55;
+}
+
+.btn-outline {
+    color: var(--green);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--green-light);
+}
+
+.hero-note {
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.hero-image img {
+    height: 490px;
+    border-radius: 48% 48% 5px 5px;
+}
+
+
+/* =====================================
+   4. INTRODUCTION
+===================================== */
+
+.intro {
+    text-align: center;
+    background: var(--white);
+}
+
+.intro h2,
+.contact h2 {
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    margin-bottom: 22px;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+
+/* =====================================
+   5. PROGRAMMES
+===================================== */
+
+.programmes {
+    background: var(--cream);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+.section-heading > p {
+    color: var(--muted);
+    max-width: 300px;
+    font-size: 0.9rem;
+}
+
+.programme-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.programme-card {
+    background: var(--white);
+    padding: 32px 26px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.programme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(52, 75, 58, 0.08);
+}
+
+.featured-card {
+    background: var(--green);
+}
+
+.featured-card h3,
+.featured-card p,
+.featured-card .text-link {
+    color: var(--white);
+}
+
+.programme-icon {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-number,
+.product-category {
+    color: #96815c;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.programme-card h3,
+.product-card h3 {
+    font-size: 1.45rem;
+    margin-bottom: 14px;
+}
+
+.programme-card > p:not(.card-number) {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+}
+
+.featured-card > p:not(.card-number) {
+    color: #e0e7dc;
+}
+
+.text-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--green);
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 4px;
+}
+
+
+/* =====================================
+   6. SKINCARE SHOP
+===================================== */
+
+.shop {
+    background: var(--white);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    min-width: 0;
+}
+
+.product-card > img {
+    height: 300px;
+    border-radius: 5px;
+    background: var(--cream);
+    transition: transform 0.35s;
+}
+
+.product-card:hover > img {
+    transform: scale(1.015);
+}
+
+.product-info {
+    padding: 22px 2px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+}
+
+.shop-note {
+    color: var(--muted);
+    font-size: 0.75rem;
+    margin-top: 20px;
+}
+
+
+/* =====================================
+   7. HEALTHY LIFESTYLE
+===================================== */
+
+.lifestyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: var(--green-light);
+}
+
+.lifestyle h2 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    margin-bottom: 22px;
+}
+
+.lifestyle-content > p:not(.eyebrow) {
+    color: var(--text);
+    margin-bottom: 28px;
+    max-width: 480px;
+}
+
+.lifestyle-image img {
+    height: 420px;
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   8. CONTACT SECTION
+===================================== */
+
+.contact {
+    text-align: center;
+    background: var(--cream);
+}
+
+.contact > p:not(.eyebrow) {
+    max-width: 520px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+}
+
+.contact small {
+    display: block;
+    margin-top: 18px;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+
+/* =====================================
+   9. FOOTER
+===================================== */
+
+.footer {
+    padding: 50px 8% 25px;
+    background: #293a2e;
+    color: #e7e9e3;
+    text-align: center;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 0.85rem;
+    color: #c3cbc0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid #536153;
+}
+
+
+/* =====================================
+   10. TABLET AND MOBILE
+===================================== */
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links > a {
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 30px;
+    }
+
+    .section-padding {
+        padding: 70px 5%;
+    }
+
+    .product-card > img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding-bottom: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links > a {
+        padding: 12px 0;
+        font-size: 0.9rem;
+    }
+
+    .nav-links .nav-button {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 9vw, 3.7rem);
+    }
+
+    .hero-image img {
+        height: 350px;
+        border-radius: 45% 45% 5px 5px;
+    }
+
+    .section-padding {
+        padding: 60px 6%;
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .programme-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .programme-card {
+        padding: 28px;
+    }
+
+    .product-card > img {
+        height: 320px;
+    }
+
+    .lifestyle {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .lifestyle-image img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .product-card > img {
+        height: 260px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+/* SAFA Nutrition Centre product showcase */
+
+.products-section {
+    padding: 80px 8%;
+    background: #f7f3ea;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 2.4rem;
+    margin: 10px 0;
+    color: #344b3a;
+}
+
+.eyebrow {
+    color: #70866a;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.product-category {
+    color: #344b3a;
+    font-size: 1.5rem;
+    margin: 35px 0 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: white;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: #344b3a;
+    margin: 0 0 10px;
+}
+
+.product-info p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.contact-section {
+    padding: 80px 8%;
+    background: #ffffff;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    padding: 30px;
+    background: #f7f3ea;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.contact-item h3 {
+    color: #344b3a;
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    color: #555;
+    line-height: 1.7;
+    margin: 5px 0;
+}
+
+
+.booking-button {
+    display: inline-block;
+    background: #344b3a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.booking-button:hover {
+    background: #526b50;
+}
+
+
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 6%;
+    background: #f2f8ef;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content h1 {
+    color: #285b3c;
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 15px 0;
+}
+
+.home-content p {
+    line-height: 1.7;
+    color: #555;
+}
+
+.home-image {
+    flex: 1;
+}
+
+.home-image img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.home-button {
+    display: inline-block;
+    margin: 12px 8px 0 0;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background: #285b3c;
+    color: white;
+    text-decoration: none;
+}
+
+.secondary-button {
+    background: white;
+    color: #285b3c;
+    border: 1px solid #285b3c;
+}
+
+@media (max-width: 700px) {
+    .home-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.services-section {
+    padding: 60px 6%;
+    background: #f7faf5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 230px;
+    display: block;
+    object-fit: cover;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    color: #285b3c;
+    margin: 0 0 10px;
+}
+
+.service-info p {
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.service-info a {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #285b3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.service-info a:hover {
+    background: #1d452d;
+}
+
+@media (max-width: 800px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.safa-home {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 65px 6%;
+    background: #f3f7ed;
+}
+
+.safa-home-content {
+    flex: 1;
+}
+
+.safa-home-content h1 {
+    color: #285b3c;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.15;
+}
+
+.safa-home-content h2 {
+    color: #69845f;
+    font-size: 28px;
+}
+
+.safa-home-content p {
+    line-height: 1.8;
+    color: #444;
+}
+
+.safa-home-image {
+    flex: 1.2;
+    min-width: 0;
+}
+
+.safa-home-image img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 14px;
+}
+
+@media (max-width: 750px) {
+    .safa-home {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+/* SEPARATE COUNSELLING & GUIDANCE SECTION */
+.counselling-section {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 70px 24px;
+    background: #edf4e8;
+    border-top: 1px solid #dce8d5;
+    border-bottom: 1px solid #dce8d5;
+    text-align: center;
+}
+
+.counselling-header {
+    max-width: 720px;
+    margin: 0 auto 38px;
+}
+
+.counselling-tag {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #dcebd4;
+    color: #285b3c;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.counselling-header h2 {
+    color: #285b3c;
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 18px 0 12px;
+}
+
+.counselling-header p {
+    color: #596458;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.counselling-hours {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.counselling-card {
+    box-sizing: border-box;
+    padding: 32px 22px;
+    background: #ffffff;
+    border: 1px solid #dce7d7;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(40, 91, 60, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.counselling-card:hover {
+    transform: translateY(-4px);
+}
+
+.counselling-icon {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.counselling-card h3 {
+    color: #285b3c;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.counselling-card p {
+    color: #697066;
+    line-height: 1.6;
+}
+
+.counselling-time {
+    margin-top: 18px;
+    color: #285b3c;
+    font-size: clamp(20px, 2.5vw, 25px);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.counselling-footer {
+    margin: 30px auto 0;
+    max-width: 650px;
+}
+
+.counselling-footer p {
+    color: #596458;
+    line-height: 1.7;
+}
+
+.counselling-footer a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 24px;
+    background: #285b3c;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.counselling-footer a:hover {
+    background: #1d452d;
+}
+
+@media (max-width: 600px) {
+    .counselling-section {
+        padding: 48px 18px;
+    }
+
+    .counselling-hours {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* FIX: CENTRE THE ENTIRE COUNSELLING SECTION */
+#timings,
+.counselling-section {
+    display: block !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 50px auto !important;
+    padding: 50px 24px !important;
+    float: none !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+/* Centre the heading and description */
+#timings .counselling-header,
+.counselling-section .counselling-header {
+    width: 100% !important;
+    max-width: 750px !important;
+    margin: 0 auto 35px !important;
+    text-align: center !important;
+}
+
+/* Put morning and evening cards side by side */
+#timings .counselling-hours,
+.counselling-section .counselling-hours {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 25px !important;
+    width: 100% !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+/* Make both cards fill the available space */
+#timings .counselling-card,
+.counselling-section .counselling-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    padding: 30px 20px !important;
+    border-radius: 18px !important;
+}
+
+/* Centre the WhatsApp enquiry below the cards */
+#timings .counselling-footer,
+.counselling-section .counselling-footer {
+    width: 100% !important;
+    max-width: 750px !important;
+    margin: 30px auto 0 !important;
+    text-align: center !important;
+}
+
+/* Stack the cards on smaller screens */
+@media (max-width: 600px) {
+    #timings .counselling-hours,
+    .counselling-section .counselling-hours {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* WELLNESS BENEFITS LIST */
+.wellness-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.wellness-benefits li {
+  position: relative;
+  padding: 12px 12px 12px 38px;
+  margin-bottom: 12px;
+  background: #f3f8f1;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.wellness-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 13px;
+  top: 12px;
+  color: #34734a;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.wellness-benefits li strong {
+  display: block;
+  color: #245a38;
+  margin-bottom: 4px;
+}
+
+.wellness-benefits li span {
+  display: block;
+  color: #555;
+  font-size: 14px;
+}
+
+/* FINAL LAYOUT FIX */
+#timings.counselling-section {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 40px auto !important;
+  padding: 30px !important;
+  box-sizing: border-box !important;
+  float: none !important;
+}
+
+#timings .counselling-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: stretch !important;
+  gap: 30px !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+#timings .counselling-left,
+#timings .wellness-info {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 520px !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 35px !important;
+  box-sizing: border-box !important;
+  float: none !important;
+  align-self: stretch !important;
+}
+
+#timings .wellness-info h2 {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+}
+
+#timings .wellness-benefits li strong {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}
+
+#timings .wellness-benefits li span {
+  font-size: 16px !important;
+}
+
+@media (max-width: 700px) {
+  #timings .counselling-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #timings .counselling-left,
+  #timings .wellness-info {
+    min-height: auto !important;
+    padding: 22px !important;
+  }
+}
+
+/* HIGHLIGHT FREE SERVICES */
+#timings .wellness-benefits li {
+  padding: 20px 18px 20px 48px !important;
+  margin-bottom: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid #d7e8d5 !important;
+  border-left: 5px solid #34734a !important;
+  border-radius: 12px !important;
+  box-sizing: border-box !important;
+}
+
+#timings .wellness-benefits li strong {
+  display: block !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  line-height: 1.5 !important;
+  color: #245a38 !important;
+  margin-bottom: 8px !important;
+}
+
+#timings .wellness-benefits li span {
+  display: block !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+  color: #424b43 !important;
+}
+
+/* GREEN TICK MARKS */
+#timings .wellness-benefits li::before {
+  content: "✓" !important;
+  color: #34734a !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  left: 15px !important;
+  top: 19px !important;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+.video-card {
+  padding: 20px;
+  background: #f3f8f1;
+  border-radius: 16px;
+  border: 1px solid #dce9d9;
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  background: #111;
+}
+
+.video-card h3 {
+  color: #245a38;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.video-card p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #111;
+  border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Counselling timing boxes - vertical layout */
+#timings .counselling-timing-list {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
+    margin-top: 20px !important;
+}
+
+/* Individual timing box */
+#timings .counselling-timing-list .counselling-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 180px !important;
+    height: auto !important;
+    flex: none !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 25px 20px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    background: #f3f8f1 !important;
+    border: 1px solid #d7e8d5 !important;
+    border-radius: 16px !important;
+}
+
+/* Icon */
+#timings .counselling-timing-list .counselling-icon {
+    font-size: 32px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Session title */
+#timings .counselling-timing-list .counselling-card h3 {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    color: #245a38 !important;
+    margin: 5px 0 10px !important;
+}
+
+/* Session description */
+#timings .counselling-timing-list .counselling-card p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 12px !important;
+}
+
+/* Timing text */
+#timings .counselling-timing-list .counselling-time {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #245a38 !important;
+    line-height: 1.5 !important;
+}
+
+/* SAFA Social Media Section */
+.social-media {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f3f8f1;
+    border-radius: 16px;
+    margin: 30px auto;
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+.social-media h2 {
+    color: #245a38;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.social-media p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 10px;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.facebook-btn {
+    background: #1877F2;
+}
+
+.instagram-btn {
+    background: #C13584;
+}
+
+@media (max-width: 500px) {
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 220px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
